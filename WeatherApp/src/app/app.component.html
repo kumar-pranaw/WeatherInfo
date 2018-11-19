@@ -9,8 +9,8 @@
 <form class="form-inline">
   <div class="form-group">
       <h4> City Name</h4> &nbsp; &nbsp; &nbsp; &nbsp;
-      <input type="text" id="place" class="form-control"  #search [formControl]="searchControl" autocomplete="off" autocapitalize="off" spellcheck="off" style="width: 300px"> &nbsp;
-      <button class="btn btn-classic" type="submit" (click)=getWeather()>Submit</button>
+      <input #locationSubmit type="text" id="place" class="form-control" #search [formControl]="searchControl" autocomplete="off" autocapitalize="off" spellcheck="off" style="width: 300px"> &nbsp;
+      <button class="btn btn-classic" type="submit" (click)="onLocationSelect(locationSubmit.value)" >Submit</button>
   </div>
   
 </form>
@@ -31,4 +31,5 @@
             </tbody>
         </table>
     </div>
-</div>
+</div> <br>
+
